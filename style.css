@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color:#FFEBA1;
+    margin: 0;
+}
+.navigation {
+    font-family: 'Righteous', cursive;
+    background-color:#464660 ;
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+}
+.nav-brand{
+    font-size: 1.5rem;
+}
+.section{
+    max-width: 70%;
+    background-color: #368B85;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 200px;
+    margin: auto;
+    text-align: center;
+}
+.label{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1.3rem 1rem 0.5rem;
+    color: #ffc71f;
+}
+input{
+    margin: auto;
+    width: 40%;
+    padding: 1rem;
+    height: 10px;
+    display: block;
+    font-size: 1.1rem;
+}
+button{
+    font-family: 'Montserrat', sans-serif;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    display: block;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border-width:medium;
+    border-color:#ffc71f;
+    margin: 0.8rem auto;
+    color: #ffc71f;
+    font-weight: bold;
+}
+.cash-given-div{
+    display:none;
+}
+.change-return{
+    display: none;
+}
+.error-message{
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+table{
+    margin: auto;
+}
+#output-table table, th, td{
+    padding: 0.2rem;
+    color: #464660;
+    background-color:#ffc71f;
+    border: 2px solid #464660 ;
+    border-collapse: collapse;
+}
+.noOfNotes{
+    background-color:white;
+    font-weight: bold;
+}
+table{
+    width: 90%;
+    table-layout: fixed;
+}
+
+th,td{
+    word-wrap: break-word;
+}
