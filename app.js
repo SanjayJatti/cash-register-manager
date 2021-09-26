@@ -6,6 +6,7 @@ const errorMessage=document.querySelector(".error-message");
 const checkButton=document.querySelector("#check-button");
 const noOfNotes=document.querySelectorAll(".noOfNotes");
 const changeReturn=document.querySelector(".change-return");
+const footer=document.querySelector(".footer");
 
 const notes = [2000,500,200,100,50,20,10,5,1];
 
@@ -21,26 +22,22 @@ nextButton.addEventListener("click",()=>{
 } )
 
 checkButton.addEventListener("click",()=>{
-console.log(noOfNotes);
-console.log(parseInt(cashGiven.value)>=parseInt(billAmount.value));
-
-if (parseInt(cashGiven.value)>=parseInt(billAmount.value)){
-    changeReturn.style.display="block";
-    const returnAmount= parseInt(cashGiven.value) - parseInt(billAmount.value);
-    calculation(returnAmount);
-    
-}else{
-    showError("Cash given is less than bill amount.Please enter right amount.");
-
-} 
+    if (Number(cashGiven.value)>=Number(billAmount.value)){
+        changeReturn.style.display="block";
+        footer.style.position = "relative";
+        const returnAmount= Number(cashGiven.value) - Number(billAmount.value);
+        calculation(returnAmount);
+    }else{
+        showError("Cash given is less than bill amount.Please enter right amount.");
+    } 
 });
 
 function calculation(returnAmount){
-for(let i=0; i<notes.length; i++){
-    const numberOfNotes= Math.trunc(returnAmount/notes[i]);
-    returnAmount %= notes[i];
-     noOfNotes[i].innerText=numberOfNotes;
-}
+    for(let i=0; i<notes.length; i++){
+        const numberOfNotes= Math.trunc(returnAmount/notes[i]);
+        returnAmount %= notes[i];
+        noOfNotes[i].innerText=numberOfNotes;
+ }
 }
 function hideError(){
     errorMessage.style.display="none";
